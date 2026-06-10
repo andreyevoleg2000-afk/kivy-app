@@ -35,9 +35,13 @@ jobs:
         buildozer android debug verbose
       env:
         REQS: kivy
+        APP_ANDROID_ARCHS: arm64-v8a
+        MAKEFLAGS: "-j 1"
+        NUMBER_OF_PROCESSORS: 1
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Android-APK
         path: bin/*.apk
+
