@@ -32,7 +32,7 @@ jobs:
 
     - name: Build APK with Buildozer
       run: |
-        buildozer android debug
+        buildozer android debug verbose
       env:
         REQS: kivy
 
