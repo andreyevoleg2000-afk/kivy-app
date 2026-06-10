@@ -1,4 +1,5 @@
 [app]
+source.dir = .
 title = AstroCalcMobile
 package.name = mykivyapp
 package.domain = org.test
