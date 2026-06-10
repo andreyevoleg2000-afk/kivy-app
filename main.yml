@@ -1,4 +1,4 @@
-name: Build APK
+.name: Build APK
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
         key: buildozer-local-${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
 
     - name: Build APK with Buildozer
-      uses: ArtemSBulgakov/buildozer-action@v1
+      uses: ArtemSBulgakov/buildozer-action@v3
       id: buildozer
       with:
         command: buildozer android debug
